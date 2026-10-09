@@ -1,0 +1,68 @@
+.md {
+  line-height: 1.65;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.md :is(p, ul, ol, pre, blockquote) {
+  margin: 0 0 0.85rem;
+}
+
+.md :is(ul, ol) {
+  padding-left: 1.25rem;
+}
+
+.md h1,
+.md h2,
+.md h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 1.2rem 0 0.55rem;
+  color: var(--ink);
+}
+
+.md h1 { font-size: 1.35rem; }
+.md h2 { font-size: 1.15rem; }
+.md h3 { font-size: 1.02rem; }
+
+.md code {
+  font-family: var(--font-display);
+  font-size: 0.88em;
+  background: rgba(30, 41, 59, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 5px;
+}
+
+.md pre {
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid var(--line);
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  overflow: auto;
+}
+
+.md pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.md a {
+  color: var(--emerald);
+}
+
+.caret {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.05em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--emerald);
+  animation: blink 0.9s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

@@ -1,0 +1,257 @@
+.wrap {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.header p {
+  margin: 0.3rem 0 0;
+  color: var(--ink-muted);
+  max-width: 42rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.segment {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
+.segment button {
+  border: 0;
+  background: transparent;
+  min-height: 36px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  color: var(--ink-muted);
+  font-weight: 600;
+  transition: background 0.2s ease-out, color 0.2s ease-out;
+}
+
+.segment button:hover {
+  color: var(--ink);
+}
+
+.segment .active {
+  background: var(--emerald-deep);
+  color: #ffffff;
+}
+
+.slider {
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  min-width: 132px;
+}
+
+.slider input {
+  accent-color: var(--emerald);
+}
+
+.ghost {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: 999px;
+  min-height: 40px;
+  padding: 0.4rem 0.9rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+  transition: background 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--surface);
+  border-color: #b6c9d0;
+}
+
+.ghost:disabled {
+  opacity: 0.45;
+}
+
+.debugOn {
+  border-color: var(--emerald);
+  color: var(--emerald-deep);
+  background: var(--emerald-soft);
+}
+
+.stage {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.thread {
+  min-height: 0;
+  overflow: auto;
+  padding: 1.25rem 1.35rem;
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.empty {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  max-width: 420px;
+  margin: 4rem 0;
+}
+
+.empty h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.empty p {
+  margin: 0.45rem 0 0;
+  color: var(--ink-muted);
+}
+
+.turn {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.user {
+  justify-self: end;
+  max-width: min(680px, 88%);
+  background: var(--ink);
+  color: #f9f8f4;
+  padding: 0.8rem 1rem;
+  border-radius: 16px 16px 4px 16px;
+  line-height: 1.5;
+}
+
+.assistant {
+  max-width: min(760px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px 16px 16px 16px;
+  padding: 0.9rem 1rem;
+}
+
+.thinking {
+  color: var(--ink-muted);
+}
+
+.error {
+  margin: 0;
+  padding: 0 1.1rem;
+  color: var(--danger);
+  font-size: 0.9rem;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.55rem;
+  padding: 0.75rem;
+  border-top: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.composer:focus-within {
+  box-shadow: inset 0 0 0 2px rgba(8, 145, 178, 0.35);
+}
+
+.composer input {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 0.7rem 0.85rem;
+  color: var(--ink);
+  min-height: 44px;
+}
+
+.composer input::placeholder {
+  color: var(--ink-muted);
+}
+
+.composer input:focus-visible {
+  outline: none;
+  border-color: var(--emerald);
+}
+
+.composer button {
+  border: 0;
+  border-radius: 999px;
+  min-height: 44px;
+  padding: 0.7rem 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  background: var(--cta);
+  color: var(--cta-ink);
+  font-weight: 700;
+  transition: background 0.2s ease-out;
+}
+
+.composer button:hover:not(:disabled) {
+  background: #1f2a22;
+}
+
+.composer button:disabled {
+  opacity: 0.5;
+}
+
+.stop {
+  background: #ffffff !important;
+  color: var(--danger) !important;
+  border: 1px solid #fecaca !important;
+}
+
+.stop:hover {
+  background: #fef2f2 !important;
+}
+
+.stopped {
+  margin: 0.55rem 0 0;
+  font-size: 0.82rem;
+  color: var(--warn);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .header {
+    align-items: stretch;
+  }
+
+  .controls {
+    width: 100%;
+  }
+}

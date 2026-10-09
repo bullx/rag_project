@@ -1,0 +1,28 @@
+# Local config. .env.example is the committed template.
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# User documents, the vector index, and logs
+local_data/
+data/
+
+# Frontend build output
+frontend/node_modules/
+frontend/dist/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
